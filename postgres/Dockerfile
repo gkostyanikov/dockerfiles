@@ -6,7 +6,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B97B0AFCAA1A47F044F
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main 9.4" > /etc/apt/sources.list.d/pgdg.list
 
 RUN apt-get update -y
-RUN apt-get install -y postgresql-9.4 postgresql-client-9.4 postgresql-contrib-9.4
+RUN apt-get install -y postgresql-9.4 postgresql-client-9.4 postgresql-contrib-9.4 python-dev libssl-dev libffi-dev
 
 # Run the rest of the commands as the ``postgres`` user created by the
 # ``postgres-9.3`` package when it was ``apt-get installed``
